@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.prescyber.prescryp.chemists.MainActivity">
+    <item
+        android:id="@+id/action_notification"
+        android:orderInCategory="100"
+        android:icon="@mipmap/ic_bell_white_icon"
+        android:title="Notification"
+        app:showAsAction="always" />
+</menu>

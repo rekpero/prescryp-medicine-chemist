@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:id="@+id/medicinesName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1.5"
+                    android:maxWidth="164dp"
+                    android:text="Medicine Name" />
+
+
+                <TextView
+                    android:id="@+id/medicineStrength"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxWidth="64dp"
+                    android:text="Strength" />
+
+
+                <TextView
+                    android:id="@+id/medicineDose"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:maxWidth="48dp"
+                    android:text="Dose" />
+
+
+                <TextView
+                    android:id="@+id/medicineDuration"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="0.75"
+                    android:text="Duration"/>
+
+
+
+            </LinearLayout>
+
+</LinearLayout>
