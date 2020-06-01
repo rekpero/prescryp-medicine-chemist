@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -21,21 +21,21 @@
         android:id="@+id/nextActivity"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/next_activity"
         android:padding="2dp"
         android:src="@drawable/right_arrow_black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/next_activity" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/verification_code"
         android:textColor="#000"
         android:textSize="24sp"
@@ -48,13 +48,13 @@
         android:id="@+id/textView17"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
         android:text="@string/please_type_the_verification_code_sent_to"
-        android:textSize="16sp"
         android:textAlignment="center"
         android:textColor="#000"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
@@ -63,9 +63,9 @@
         android:id="@+id/mobile_number_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
         android:text="@string/_91_7098314519"
         android:textAlignment="center"
         android:textColor="#000"
@@ -80,12 +80,12 @@
         style="@style/PinWidget.PinView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="42dp"
+        android:layout_marginEnd="32dp"
         android:cursorVisible="true"
-        android:itemBackground="#5000"
         android:inputType="phone"
+        android:itemBackground="#5000"
         android:textColor="#FFF"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -103,4 +103,4 @@
         app:lineWidth="2dp"
         app:viewType="rectangle" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

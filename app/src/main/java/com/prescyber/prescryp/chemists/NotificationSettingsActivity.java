@@ -1,14 +1,13 @@
 package com.prescyber.prescryp.chemists;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class NotificationSettingsActivity extends AppCompatActivity {
 
@@ -20,7 +19,7 @@ public class NotificationSettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification_settings);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -38,19 +37,19 @@ public class NotificationSettingsActivity extends AppCompatActivity {
         important_updates_mobile_checkbox = findViewById(R.id.important_updates_mobile_checkbox);
         social_notification_mobile_checkbox = findViewById(R.id.social_notification_mobile_checkbox);
 
-        enableAllSwitch = (Switch) findViewById(R.id.enableAllSwitch);
+        enableAllSwitch = findViewById(R.id.enableAllSwitch);
         enableAllSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b == true){
+                if (b == true) {
                     activity_photo_checkbox.setChecked(true);
                     important_updates_checkbox.setChecked(true);
                     social_notification_checkbox.setChecked(true);
                     activity_photo_mobile_checkbox.setChecked(true);
                     important_updates_mobile_checkbox.setChecked(true);
                     social_notification_mobile_checkbox.setChecked(true);
-                }else{
-                    if (isUnchecked == false){
+                } else {
+                    if (isUnchecked == false) {
                         activity_photo_checkbox.setChecked(false);
                         important_updates_checkbox.setChecked(false);
                         social_notification_checkbox.setChecked(false);

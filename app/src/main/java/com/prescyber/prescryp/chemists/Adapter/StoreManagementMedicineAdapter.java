@@ -3,20 +3,19 @@ package com.prescyber.prescryp.chemists.Adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.annotation.NonNull;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -24,15 +23,12 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.chaos.view.PinView;
 import com.prescyber.prescryp.chemists.Interface.OnBottomReachedListener;
 import com.prescyber.prescryp.chemists.Interface.OnNotReachedBottomListener;
 import com.prescyber.prescryp.chemists.Model.StoreMedicineItem;
 import com.prescyber.prescryp.chemists.R;
 import com.prescyber.prescryp.chemists.SessionManager.UserSessionManager;
-import com.prescyber.prescryp.chemists.StockManagementActivity;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 

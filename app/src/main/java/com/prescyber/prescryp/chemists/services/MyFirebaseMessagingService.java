@@ -1,26 +1,15 @@
 package com.prescyber.prescryp.chemists.services;
 
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
-import android.provider.Settings;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.TaskStackBuilder;
 import android.util.Log;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-import com.prescyber.prescryp.chemists.MainActivity;
 import com.prescyber.prescryp.chemists.Misc.MyNotificationManager;
 import com.prescyber.prescryp.chemists.OrderDetailsActivity;
-import com.prescyber.prescryp.chemists.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.Random;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 

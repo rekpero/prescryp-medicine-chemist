@@ -2,16 +2,14 @@ package com.prescyber.prescryp.chemists;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
-import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -20,6 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.prescyber.prescryp.chemists.SessionManager.UserSessionManager;
@@ -51,7 +50,7 @@ public class SigninActivity extends AppCompatActivity {
         session = new UserSessionManager(getApplicationContext());
         if (session.isLoggedIn()){
             HashMap<String, String> user = session.getUserDetails();
-            String session_mob = user.get(session.KEY_MOB);
+            String session_mob = user.get(UserSessionManager.KEY_MOB);
             Intent custom = new Intent(SigninActivity.this, MainActivity.class);
             custom.putExtra("SENDERS_KEY", "CUSTOM_LOGIN");
             custom.putExtra("mobile_number", session_mob);
@@ -65,7 +64,7 @@ public class SigninActivity extends AppCompatActivity {
 
         signin = findViewById(R.id.signinCardview);
         create_acc = findViewById(R.id.create_new_acc_button);
-        progressBar = (ProgressBar) findViewById(R.id.loading);
+        progressBar = findViewById(R.id.loading);
 
         signin.setOnClickListener(new View.OnClickListener() {
             @Override

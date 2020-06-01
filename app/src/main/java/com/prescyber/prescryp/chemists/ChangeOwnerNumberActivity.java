@@ -1,21 +1,21 @@
 package com.prescyber.prescryp.chemists;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 
 public class ChangeOwnerNumberActivity extends AppCompatActivity {
 
     CardView call_us_card;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_owner_number);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -25,7 +25,7 @@ public class ChangeOwnerNumberActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
-        call_us_card = (CardView) findViewById(R.id.call_us_card);
+        call_us_card = findViewById(R.id.call_us_card);
         call_us_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

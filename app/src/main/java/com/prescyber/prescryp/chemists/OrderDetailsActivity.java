@@ -2,24 +2,21 @@ package com.prescyber.prescryp.chemists;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -27,7 +24,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.badoualy.stepperindicator.StepperIndicator;
 import com.chaos.view.PinView;
 import com.prescyber.prescryp.chemists.Adapter.OrderListAdapter;
 import com.prescyber.prescryp.chemists.Adapter.PrescriptionForOrderAdapter;
@@ -73,7 +69,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_details);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -637,11 +633,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
                             attached_prescription_list.add(new ListItem(attached_prescription.getString("prescription_id"),
                                     attached_prescription.getString("dateOfCreation"), attached_prescription.getString("status"), attached_prescription.getString("imagePath")));
 
-                            if (attached_prescription.getString("prescription_verification").equalsIgnoreCase("")){
-                                pres_verification_done = false;
-                            }else {
-                                pres_verification_done = true;
-                            }
+                            pres_verification_done = !attached_prescription.getString("prescription_verification").equalsIgnoreCase("");
 
                         }
                         String attached_pres_size = "Attached Prescription (" + attached_prescription_list.size() + ")";
